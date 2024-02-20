@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "dgSpecHash": "iVMY0H44YAGrYWo2vRaIDrmfuMedivFrK9fmvBugvukIQbQUVw9dL6hugecFbu1lbKO8cqfqC2SSdkA6CtqIAw==",
+  "success": true,
+  "projectFilePath": "/home/tanishka/base-images-docker-file/dot-net/MyAspNetCoreApp/MyAspNetCoreApp.csproj",
+  "expectedPackageFiles": [],
+  "logs": []
+}

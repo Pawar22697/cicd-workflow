@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "6TjsOeC671LPWRR+7kdASrMqD5kZWsuiKkOHNNFfFzc=",
+  "Source": "MyAspNetCoreApp",
+  "BasePath": "_content/MyAspNetCoreApp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
