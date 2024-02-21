@@ -20,7 +20,7 @@ jobs:
         run: docker build -t $REGISTRY/shubhampawar819/$IMAGE_NAME:$TAG -f Dockerfile .
 
       - name: Docker Registry login
-        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+        run: docker login -u shubhampawar819 -p ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Push image to docker registry
         run: docker push $REGISTRY/shubhampawar819/$IMAGE_NAME:$TAG
