@@ -8,19 +8,18 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      IMAGE_NAME: dotnet-app
+      TAG: ${{ github.sha }}
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
       - name: Docker build and add tag
-        env:
-          REGISTRY: docker.io
-          IMAGE_NAME: dotnet-app
-          TAG: ${{ github.sha }}
         run: docker build -t shubhampawar819/$IMAGE_NAME:$TAG -f Dockerfile .
 
       - name: Docker Registry login
-        run: docker login -u shubhampawar819 -p ${{ secrets.DOCKER_PASSWORD }}
+        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Push image to docker registry
         run: docker push shubhampawar819/$IMAGE_NAME:$TAG
