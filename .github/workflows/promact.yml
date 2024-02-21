@@ -17,13 +17,13 @@ jobs:
           REGISTRY: docker.io
           IMAGE_NAME: dotnet-app
           TAG: ${{ github.sha }}
-        run: docker build -t $REGISTRY/shubhampawar819/$IMAGE_NAME:$TAG -f Dockerfile .
+        run: docker build -t shubhampawar819/$IMAGE_NAME:$TAG -f Dockerfile .
 
       - name: Docker Registry login
         run: docker login -u shubhampawar819 -p ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Push image to docker registry
-        run: docker push $REGISTRY/shubhampawar819/$IMAGE_NAME:$TAG
+        run: docker push shubhampawar819/$IMAGE_NAME:$TAG
 
       - name: Print success message!
         run: echo "Image pushed successfully with name $REGISTRY/shubhampawar819/$IMAGE_NAME:$TAG"
