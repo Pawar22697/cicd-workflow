@@ -25,4 +25,4 @@ jobs:
         run: docker push shubhampawar819/$IMAGE_NAME:$TAG
 
       - name: Print success message!
-        run: echo "Image pushed successfully with name $REGISTRY/shubhampawar819/$IMAGE_NAME:$TAG"
+        run: echo "Image pushed successfully with name shubhampawar819/$IMAGE_NAME:$TAG"
