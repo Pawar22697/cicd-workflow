@@ -16,7 +16,7 @@ jobs:
         env:
           REGISTRY: docker.io
           IMAGE_NAME: dotnet-app
-          TAG: ${{ github.sha }
+          TAG: ${{ github.sha }}
         run: docker build -t $REGISTRY/shubhampawar819/$IMAGE_NAME:$TAG -f Dockerfile .
 
       - name: Docker Registry login
